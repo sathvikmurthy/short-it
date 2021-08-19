@@ -1,0 +1,82 @@
+.nav {
+	height: 60px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--primarycolor);
+	color: var(--quaternarycolor);
+	border-bottom: 1px solid rgba(255,255,255,0.2)
+}
+
+.nav__rightmenu {
+	display: flex;
+	flex-direction: row;
+	margin-right: 20px;
+	height: 100%;
+	align-items: center;
+}
+
+.nav__rightmenu > ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nav__rightmenu > ul > a {
+	color: var(--secondarycolor);
+	margin-right: 20px;
+	text-decoration: none;
+	font-size: 14px;
+	background: 
+      linear-gradient(currentColor 0 0) 
+      0 100% /var(--d, 0) 1px 
+    no-repeat;
+  	transition:0.4s;
+}
+
+.nav__rightmenu > ul > a:hover {
+	--d: 100%;
+}
+
+.nav__github {
+	background-color: var(--teritiarycolor);
+	border: none;
+	padding: 5px;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.nav__login {
+	height: 30px;
+	padding: 0 8px 0 8px;
+	cursor: pointer;
+	border-radius: 3px;
+	background-color: var(--secondarycolor);
+	border: none;
+	color: var(--quaternarycolor);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 400ms;
+}
+
+.nav__leftmenu {
+	margin-left: 20px;
+}
+
+.nav__logo {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	box-sizing: content-box;
+	border: 2px solid var(--secondarycolor);
+	cursor: pointer;
+}
+

@@ -1,0 +1,72 @@
+.login {
+	background-color: var(--primarycolor);
+	width: 100%;
+	height: calc(100vh - 90px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.login__heading {
+	color: var(--quaternarycolor);
+}
+
+.login__google, .login__github {
+	height: 40px;
+	outline: none;
+	border-radius: 3px;
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--secondarycolor);
+	color: var(--quaternarycolor);
+	cursor: pointer;
+	border: none;
+}
+
+.login__google {
+	margin-top: 40px;
+	margin-bottom: 10px;
+}
+
+.login__google > span {
+	margin-left: 10px;
+}
+
+.login__github {
+	margin-top: 10px;
+}
+
+.login__github > span {
+	margin-left: 10px;
+}
+
+.login__error {
+	margin-top: 30px;
+	color: red;
+	width: 30%;
+	text-align: center;
+	font-size: 12px;
+}
+
+@media all and (max-width: 768px) {
+	.login__heading {
+		font-size: 14px;
+		text-align: center;
+		width: 80%;
+	}
+
+	.login__google, .login__github {
+		height: 30px;
+		width: 60%;
+	}
+
+	.login__error {
+		font-size: 10px;
+		width: 80%;
+	}
+}
