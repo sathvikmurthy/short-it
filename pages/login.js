@@ -83,8 +83,8 @@ export default function Login() {
 
 			<span className={styles.login__heading}>Login with one of the social platforms below.</span>
 
-			<button className={styles.login__google} onClick={googleSignIn}><Image src={GoogleIcon} /><span>SignIn with Google</span></button>
-			<button className={styles.login__github} onClick={githubSignIn}><Image src={GithubIcon} /><span>SignIn with Github</span></button>
+			<button className={styles.login__google} onClick={googleSignIn}><Image src={GoogleIcon} alt="" /><span>SignIn with Google</span></button>
+			<button className={styles.login__github} onClick={githubSignIn}><Image src={GithubIcon} alt="" /><span>SignIn with Github</span></button>
 
 			{isError ? (<span className={styles.login__error}>{loginError}</span>) : (<></>) }
 		</div>

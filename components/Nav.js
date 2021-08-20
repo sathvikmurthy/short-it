@@ -2,7 +2,6 @@ import React from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from "../styles/Nav.module.css";
-import Avatar from "@material-ui/core/Avatar";
 import { useRecoilState } from 'recoil';
 import { useEffect, useState, useRef } from "react";
 import { userNameState, userEmailState, userLogoState, isLogState, topLoadState } from "../stores/store";
@@ -11,6 +10,15 @@ import LoadingBar from 'react-top-loading-bar';
 import Dropdown from "./Dropdown";
 import Tooltip from '@material-ui/core/Tooltip';
 import { authe } from "../utils/firebase";
+import { withStyles } from '@material-ui/core/styles';
+import Avatar from '@material-ui/core/Avatar';
+
+const StyledAvatar = withStyles({
+	root: {
+		width: '30px',
+		height: '30px',
+	}
+})(Avatar);
 
 function Nav() {
 
@@ -53,7 +61,7 @@ function Nav() {
 		} else {
 			
 		}
-	}, [])
+	}, [userEmail, userName, userLogo])
 
 	useEffect(() => {
 		if(userEmail) {
@@ -90,7 +98,7 @@ function Nav() {
 				</ul>
 
 				{isUser ? 
-					(<img onClick={() => setIsDrop(!isDrop)} className={styles.nav__logo} src={userLogo}/>) 
+					(<button onClick={() => setIsDrop(!isDrop)} className={styles.nav__logobtn} ><StyledAvatar src={userLogo}/></button>) 
 				: 
 					(<Link href="/login"><button className={styles.nav__login}>Login</button></Link>)
 				}

@@ -134,7 +134,7 @@ function HomeComponent() {
 							<Tooltip placement="bottom" arrow className={styles.home__copyshort} title={isCopy ? ("Copied") : ("Copy Link")}>
 								<CopyToClipboard text={serverLink}>
 									<button onClick={copyLink} className={styles.home__copyshort}>
-										{isCopy ? (<Image src={CheckIcon} />) : (<Image src={CopyIcon} />)}
+										{isCopy ? (<Image src={CheckIcon} alt="" />) : (<Image src={CopyIcon} alt="" />)}
 									</button>
 								</CopyToClipboard>
 							</Tooltip>

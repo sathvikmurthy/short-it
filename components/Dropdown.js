@@ -27,7 +27,7 @@ export default function DropDown(props) {
 			<div onClick={click} className={styles.rows}>
 				<div className={styles.rows__container}>
 					{children}
-					<Image className={styles.rows__icons} src={image} />
+					<Image className={styles.rows__icons} src={image} alt="" />
 				</div>
 			</div>
 		)
