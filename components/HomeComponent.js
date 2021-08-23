@@ -25,7 +25,7 @@ const StyledCircularProgress = withStyles({
 })(CircularProgress);
 
 
-function HomeComponent() {
+export default function HomeComponent() {
 
 	const [userEmail, setUserEmail] = useRecoilState(userEmailState);
 	const [topLoad, setTopLoad] = useRecoilState(topLoadState);
@@ -57,7 +57,7 @@ function HomeComponent() {
 		setShortLoad(true);
 		setTopLoad(true);
 
-		await Axios.post("https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyDmSHyTlTvf0WdW_22cL4LC7ESM6EydIII", postLinkData)
+		await Axios.post(`https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${process.env.NEXT_PUBLIC_FIREAPIKEY}`, postLinkData)
 		.then((res) => {
 			setServerLink(res.data.shortLink);
 			setSnackText("Link Shortened!");
@@ -66,6 +66,12 @@ function HomeComponent() {
 			setTimeout(() => {
 				setIsSnackbar(false);
 			}, 3000);
+
+			setShortLoad(false);
+			setTopLoad(false);
+		})
+		.catch((error) => {
+			setServerLink("Sorry there seems to be an error.");
 
 			setShortLoad(false);
 			setTopLoad(false);
@@ -176,6 +182,13 @@ function HomeComponent() {
 	}
 }
 
+export async function getServerSideProps() {
 
+	console.log(process.env.DYNAMIC_KEY)
 
-export default HomeComponent;
+	return {
+		props: {
+			hello: 'world'
+		}
+	}
+}

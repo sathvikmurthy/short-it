@@ -23,10 +23,10 @@ export default function Login() {
 	const [loginError, setLoginError] = useState("");
 	const [isError, setIsError] = useState(false);
 
-	const googleSignIn = () => {
+	const googleSignIn = async () => {
 		setTopLoad(true);
 
-		authe.signInWithPopup(googleProvider)
+		await authe.signInWithPopup(googleProvider)
 		.then((result) => {
 			setUserEmail(result.user.bc.email);
 			setUserLogo(result.user.photoURL);
@@ -46,10 +46,10 @@ export default function Login() {
 		})
 	}
 
-	const githubSignIn = () => {
+	const githubSignIn = async () => {
 		setTopLoad(true);
 
-		authe.signInWithPopup(githubProvider)
+		await authe.signInWithPopup(githubProvider)
 		.then((result) => {
 			setUserEmail(result.user.bc.email);
 			setUserLogo(result.user.photoURL);
@@ -78,7 +78,11 @@ export default function Login() {
 	return(
 		<div className={styles.login}>
 			<Head>
-				<title>Short-It | Login</title>
+				<title>Short-It - Login</title>
+				<meta name="description" content="Login to Short-It." />
+				<meta name="keywords" content="Url Shortener, Url, Free Url shortener, Bitly, Google Url Shortener" />
+				<meta name="copyright" content="Short-It" />
+        		<meta name="language" content="EN" />
 			</Head>
 
 			<span className={styles.login__heading}>Login with one of the social platforms below.</span>
@@ -90,3 +94,4 @@ export default function Login() {
 		</div>
 	)
 }
+

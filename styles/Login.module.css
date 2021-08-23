@@ -11,6 +11,7 @@
 
 .login__heading {
 	color: var(--quaternarycolor);
+	font-weight: 600;
 }
 
 .login__google, .login__github {
@@ -26,6 +27,8 @@
 	color: var(--quaternarycolor);
 	cursor: pointer;
 	border: none;
+	outline: none;
+	font-weight: 600;
 }
 
 .login__google {
@@ -51,6 +54,7 @@
 	width: 30%;
 	text-align: center;
 	font-size: 12px;
+	font-weight: 500;
 }
 
 @media all and (max-width: 768px) {
@@ -61,7 +65,7 @@
 	}
 
 	.login__google, .login__github {
-		height: 30px;
+		height: 35px;
 		width: 60%;
 	}
 

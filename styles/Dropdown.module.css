@@ -78,6 +78,7 @@
 .dropdown__titles {
 	font-size: 12px;
 	transition: 400ms;
+	font-weight: 600;
 }
 
 .dropdown__name {
@@ -88,6 +89,7 @@
 	margin-top: 3px;
 	color: var(--secondarycolor);
 	transition: 400ms;
+	font-weight: 500;
 }
 
 .rows__container >  a {
@@ -95,6 +97,7 @@
 	text-decoration: none;
 	font-size: 12px;
 	transition: 400ms;
+	font-weight: 600;
 }
 
 @media all and (max-width: 768px) {

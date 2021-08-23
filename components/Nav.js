@@ -33,10 +33,10 @@ function Nav() {
 
 	const [isDrop, setIsDrop] = useState(false);
 
-	const logOut = () => {
+	const logOut = async () => {
 		setTopLoad(true);
 
-		authe.signOut().then(() => {
+		await authe.signOut().then(() => {
 			localStorage.removeItem('userEmail');
 			localStorage.removeItem('userLogo');
 			localStorage.removeItem('userName');
@@ -61,7 +61,7 @@ function Nav() {
 		} else {
 			
 		}
-	}, [userEmail, userName, userLogo])
+	}, [userEmail, userName, userLogo]);
 
 	useEffect(() => {
 		if(userEmail) {
@@ -87,18 +87,18 @@ function Nav() {
 		<nav className={styles.nav}>
 			<LoadingBar color='#ba54f5' ref={ref} />
 
-			<div className={styles.nav__leftmenu}>
-				<Link href="/"><span>Logo here</span></Link>
+			<div title="Short-It" className={styles.nav__leftmenu}>
+				<Link href="/" >SHORT-IT</Link>
 			</div>
 
 			<div className={styles.nav__rightmenu}>
 
 				<ul>
-					<Tooltip title="Open Source" arrow><button className={styles.nav__github}><Image src={GitHubIcon} /></button></Tooltip>
+					<Tooltip title="Open Source" arrow><button onClick={() => window.open("https://github.com/notsathvik/short-it")} className={styles.nav__github}><Image src={GitHubIcon} /></button></Tooltip>
 				</ul>
 
 				{isUser ? 
-					(<button onClick={() => setIsDrop(!isDrop)} className={styles.nav__logobtn} ><StyledAvatar src={userLogo}/></button>) 
+					(<button onClick={() => setIsDrop(!isDrop)} className={styles.nav__logobtn} ><StyledAvatar src={userLogo} alt={userName}/></button>) 
 				: 
 					(<Link href="/login"><button className={styles.nav__login}>Login</button></Link>)
 				}

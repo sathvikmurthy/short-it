@@ -60,6 +60,9 @@
 	border-radius: 3px;
 	background-color: var(--secondarycolor);
 	border: none;
+	outline: none;
+	font-weight: 600;
+	font-size: 12px;
 	color: var(--quaternarycolor);
 	display: flex;
 	align-items: center;
@@ -71,6 +74,14 @@
 	margin-left: 20px;
 }
 
+.nav__leftmenu > a {
+	color: var(--secondarycolor);
+	font-size: 20px;
+	letter-spacing: 1px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
 .nav__logobtn {
 	height: 30px;
 	width: 30px;
@@ -78,5 +89,12 @@
 	box-sizing: content-box;
 	border: 2px solid var(--secondarycolor);
 	cursor: pointer;
+	outline: none;
+}
+
+@media all and (max-width: 768px) {
+	.nav__leftmenu > a {
+		font-size: 18px;
+	}
 }
 

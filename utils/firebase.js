@@ -1,13 +1,13 @@
 import firebase from "firebase";
 
 var config = {
-	apiKey: "AIzaSyDmSHyTlTvf0WdW_22cL4LC7ESM6EydIII",
-  	authDomain: "short-it-links.firebaseapp.com",
-  	projectId: "short-it-links",
-  	storageBucket: "short-it-links.appspot.com",
-  	messagingSenderId: "660642584245",
-  	appId: "1:660642584245:web:ea207fbcc6c41f72a510fc",
-  	measurementId: "G-N3VYJDH0XF"
+	apiKey: `${process.env.NEXT_PUBLIC_FIREAPIKEY}`,
+  	authDomain: `${process.env.NEXT_PUBLIC_FIREAUTHDOMAIN}`,
+  	projectId: `${process.env.NEXT_PUBLIC_FIREPROJECTID}`,
+  	storageBucket: `${process.env.NEXT_PUBLIC_FIRESTORAGEBUCKET}`,
+  	messagingSenderId: `${process.env.NEXT_PUBLIC_FIREMESSAGINGSENDERID}`,
+  	appId: `${process.env.NEXT_PUBLIC_FIREAPPID}`,
+  	measurementId: `${process.env.NEXT_PUBLIC_MEASUREMENTID}`
 }
 
 const shortitApp = !firebase.apps.length ? firebase.initializeApp(config) : firebase.app();

@@ -28,6 +28,7 @@
 	justify-content: center;
 	color: white;
 	font-size: 14px;
+	font-weight: 600;
 }
 
 .home__loginmsg > span > a {
@@ -97,6 +98,8 @@
 }
 
 .home__linkinput {
+	font-weight: 600;
+	font-size: 14px;
 	width: 50%;
 	height: 40px;
 	outline: none;
@@ -109,7 +112,12 @@
 	margin-right: 10px;
 }
 
+.home__linkinput::selection {
+	background-color: var(--secondarycolor);
+}
+
 .home__linksubmitdisabled, .home__linksubmit {
+	font-weight: 600;
 	border-radius: 3px;
 	transition: 400ms;
 	color: var(--quaternarycolor);
@@ -149,6 +157,7 @@
 }
 
 .home__shortlinkinput {
+	font-weight: 600;
 	height: 40px;
 	width: 40%;
 	background-color: inherit;
@@ -159,6 +168,10 @@
 	text-align: center;
 	background-color: var(--teritiarycolor);
 	border-radius: 3px;
+}
+
+.home__shortlinkinput::selection {
+	background-color: var(--secondarycolor);
 }
 
 .home__copyshort {
@@ -175,6 +188,10 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+}
+
+.MuiSnackbarContent-message {
+	font-size: 8px;
 }
 
 @media all and (max-width: 768px) {
@@ -205,7 +222,7 @@
 
 	.home__linkinput {
 		width: 80%;
-		height: 30px;
+		height: 40px;
 		font-size: 12px;
 		margin-right: 0px;
 		border: 2px solid var(--secondarycolor);
@@ -214,7 +231,7 @@
 
 	.home__linksubmitdisabled, .home__linksubmit {
 		width: 20%;
-		height: 30px;
+		height: 40px;
 		font-size: 12px;
 		margin-left: 0px;
 		margin-top: 10px;
@@ -226,14 +243,14 @@
 	}
 
 	.home__shortlinkinput {
-		height: 30px;
+		height: 40px;
 		font-size: 12px;
 		margin-right: 0px;
 		width: 60%;
 	}
 
 	.home__copyshort {
-		height: 30px;
-		width: 8%;
+		height: 40px;
+		width: 10%;
 	}
 }
