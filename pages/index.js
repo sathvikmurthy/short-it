@@ -1,8 +1,14 @@
 import Head from 'next/head'
 import styles from "../styles/Home.module.css";
 import HomeComponent from "../components/HomeComponent";
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(() => {
+    console.clear();
+  }, [])
+
   return (
     <div className={styles.App}>
       <Head>
