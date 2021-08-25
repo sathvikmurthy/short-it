@@ -36,7 +36,7 @@
 	text-decoration: none;
 	background: 
      linear-gradient(90deg, currentColor calc(100%/3), transparent 0 calc(200%/3), currentColor 0) 
-     var(--d, 0%) 100% /300% 1px 
+     var(--d, 0%) 100% /300% 2px 
     no-repeat;
   	transition:0.8s;
 }
@@ -51,7 +51,7 @@
 }
 
 .left__ads, .right__ads {
-	width: 160px;
+	width: 120px;
 	background-color: inherit;
 	height: 600px;
 }
@@ -66,7 +66,7 @@
 
 .top__adsmobile, .bottom__adsmobile {
 	display: none;
-	width: 300px;
+	width: 320px;
 	height: 50px;
 	background-color: inherit;
 }
@@ -252,5 +252,11 @@
 	.home__copyshort {
 		height: 40px;
 		width: 10%;
+	}
+}
+
+@media all and (max-width: 280px) {
+	.top__adsmobile, .bottom__adsmobile {
+		display: none;
 	}
 }

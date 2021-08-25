@@ -94,7 +94,7 @@ function Nav() {
 			<div className={styles.nav__rightmenu}>
 
 				<ul>
-					<Tooltip title="Open Source" arrow><button onClick={() => window.open("https://github.com/notsathvik/short-it")} className={styles.nav__github}><Image src={GitHubIcon} /></button></Tooltip>
+					<Tooltip title="Open Source" arrow><button onClick={() => window.open("https://github.com/notsathvik/short-it")} className={styles.nav__github}><Image src={GitHubIcon} alt="Github" /></button></Tooltip>
 				</ul>
 
 				{isUser ? 

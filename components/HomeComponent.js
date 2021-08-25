@@ -119,11 +119,11 @@ export default function HomeComponent() {
 
 			<div className={styles.home__main}>
 				<div className={styles.left__ads}>
-					<SidebarAd></SidebarAd>
+					<SidebarAd iframesrc="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=11&l=ur1&category=amz_music&banner=11HN0GNZ493G4V6304R2&f=ifr&linkID=992e8be6a160281efd002317c3518985&t=sathvik31-20&tracking_id=sathvik31-20" />
 				</div>
 
 				<div className={styles.top__adsmobile}>
-					<MobileAd />
+					<MobileAd iframesrc="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=288&l=ur1&category=amz_music&banner=14G0027M0PP7VXDEFBR2&f=ifr&linkID=9bf39778dd82c7eb266a5ee03e4dc690&t=sathvik31-20&tracking_id=sathvik31-20" />
 				</div>
 
 				<div className={styles.home__content}>
@@ -140,7 +140,7 @@ export default function HomeComponent() {
 							<Tooltip placement="bottom" arrow className={styles.home__copyshort} title={isCopy ? ("Copied") : ("Copy Link")}>
 								<CopyToClipboard text={serverLink}>
 									<button onClick={copyLink} className={styles.home__copyshort}>
-										{isCopy ? (<Image src={CheckIcon} alt="" />) : (<Image src={CopyIcon} alt="" />)}
+										{isCopy ? (<Image src={CheckIcon} alt="Copied" />) : (<Image src={CopyIcon} alt="Copy" />)}
 									</button>
 								</CopyToClipboard>
 							</Tooltip>
@@ -149,11 +149,11 @@ export default function HomeComponent() {
 				</div>
 
 				<div className={styles.bottom__adsmobile}>
-					<MobileAd />
+					<MobileAd iframesrc="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=288&l=ur1&category=amz_music&banner=0P340P7WYQ7P0BXDXG02&f=ifr&linkID=35adbdd02045713bf7ed7cd7a03f6f77&t=sathvik31-20&tracking_id=sathvik31-20" />
 				</div>
 
 				<div className={styles.right__ads}>
-					<SidebarAd></SidebarAd>
+					<SidebarAd iframesrc="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=29&l=ur1&category=amz_music&banner=0C9WS6QAWTBYST6G1XR2&f=ifr&linkID=c3d68ee8371da759bdbc0007a40c4927&t=sathvik31-20&tracking_id=sathvik31-20" />
 				</div>
 			</div>
 

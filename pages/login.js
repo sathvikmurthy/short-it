@@ -69,6 +69,9 @@ export default function Login() {
 		})
 	}
 
+	const adSrc = "//rcm-na.amazon-adsystem.com/e/cm?o=1&p=13&l=ur1&category=amz_music&banner=14TVPT2VMAVM946B7302&f=ifr&linkID=c1f0b716636458daf2c6b4b3c706ce7a&t=sathvik31-20&tracking_id=sathvik31-20"
+	const mobileAdSrc = "//rcm-na.amazon-adsystem.com/e/cm?o=1&p=21&l=ur1&category=amz_music&banner=1Z5JPPFTA0DXHHK2CVR2&f=ifr&linkID=e2ee075db05c3ca02ccba9959644b273&t=sathvik31-20&tracking_id=sathvik31-20"
+
 	useEffect(() => {
 		if(localStorage.getItem('isLog') === "true") {
 			Router.push("/");
@@ -87,11 +90,21 @@ export default function Login() {
 
 			<span className={styles.login__heading}>Login with one of the social platforms below.</span>
 
-			<button className={styles.login__google} onClick={googleSignIn}><Image src={GoogleIcon} alt="" /><span>SignIn with Google</span></button>
-			<button className={styles.login__github} onClick={githubSignIn}><Image src={GithubIcon} alt="" /><span>SignIn with Github</span></button>
+			<button className={styles.login__google} onClick={googleSignIn}><Image src={GoogleIcon} alt="Google" /><span>SignIn with Google</span></button>
+			<button className={styles.login__github} onClick={githubSignIn}><Image src={GithubIcon} alt="Github" /><span>SignIn with Github</span></button>
 
 			{isError ? (<span className={styles.login__error}>{loginError}</span>) : (<></>) }
+
+			<LoginAds iframesrc={adSrc} adstyle={styles.login__ads} adwidth="468" adheight="60"/>
+
+			<LoginAds iframesrc={mobileAdSrc} adstyle={styles.login__adsmobile} adwidth="125" adheight="125"/>
 		</div>
 	)
+
+	function LoginAds({ iframesrc, className, adwidth, adheight, adstyle }) {
+		return(
+			<iframe className={adstyle} src={iframesrc} width={adwidth} height={adheight} scrolling="no" border="0" marginWidth="0" frameBorder="0"></iframe>
+		)
+	}
 }
 

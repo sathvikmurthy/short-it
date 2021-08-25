@@ -57,11 +57,28 @@
 	font-weight: 500;
 }
 
+.login__ads {
+	margin-top: 50px;
+}
+
+.login__adsmobile {
+	margin-top: 50px;
+	display: none;
+}
+
 @media all and (max-width: 768px) {
 	.login__heading {
 		font-size: 14px;
 		text-align: center;
 		width: 80%;
+	}
+
+	.login__ads {
+		display: none;
+	}
+
+	.login__adsmobile {
+		display: block;
 	}
 
 	.login__google, .login__github {
